@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Zack Ellington's personal website">
+    <meta name="keywords" content="Zack Ellington, Zack Ellington website, Zack Ellington LinkedIn, Zack Ellington Instagram, Zack Ellington X,
+    Zack Ellington GitHub, Zack Ellington UBC, Zack Ellington University of British Columbia, Zack Ellington Sauder, Zack Ellington Sauder School of Business">
+    <meta name="author" content="Zack Ellington">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Zack Ellington</title>
+</head>
+<body>
+    <h1>Zack Ellington</h1>
+    <div style="text-align: center;">
+    <h3>Undergraduate | University of British Columbia</h3>
+    </div>
+    <script>
+        function setURL(url) {
+            const frameBox = document.getElementById("frameBox");
+            const iframe = document.getElementById("iframe");
+            frameBox.classList.remove("frame-open");
+            frameBox.classList.add("frame-close");
+            frameBox.addEventListener("animationend", function handler() {
+                iframe.src = url;
+                setTimeout(() => {
+                    frameBox.classList.remove("frame-close");
+                    frameBox.classList.add("frame-open");
+                    }, 150);
+                frameBox.removeEventListener("animationend", handler);
+            });
+        }
+    </script>
+
+    <div class="center">
+        <button onclick="setURL('ze_page1.html')">
+            <img src="images/About_Me.jpg" alt="1" width="40px" height="40px" title="About Me">
+        </button>
+        <button onclick="setURL('ze_page2.html')">
+            <img src="images/Links.jpg" alt="2" width="40px" height="40px" title="Links">
+        </button>
+        <button onclick="setURL('ze_page3.html')">
+            <img src="images/Work.jpg" alt="3" width="40px" height="40px" title="Work">
+        </button>
+
+        <button onclick="setURL('ze_page4.html')">
+            <img src="images/Projects.jpg" alt="4" width="40px" height="40px" title="Projects">
+        </button>
+    </div>
+    <!--<div class="center"></div>
+        <button onclick="setURL('ze_page5.html')">
+            5
+        </button>
+        <button onclick="setURL('ze_page6.html')">
+            6
+        </button>
+    </div>-->
+    <br>
+    <div class="center">
+        <div id="frameBox">
+            <iframe id="iframe" src="ze_page1.html" frameborder="1"></iframe>
+        </div>
+    </div>
+</body>
+</html>
